@@ -32,7 +32,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [GitHub](https://github.com/martinw0/advice-generator)
-- Live Site URL: [GitHub Pages]()
+- Live Site URL: [GitHub Pages](https://martinw0.github.io/advice-generator/)
 
 ## My process
 
@@ -41,16 +41,33 @@ Users should be able to:
 - Semantic HTML5 markup
 - CSS custom properties
 - Flexbox
-- CSS Grid
 - Mobile-first workflow
+- SCSS
+- JS
 
 ### What I learned
 
+How to do an HTTP request in JS:
+
+```js
+    request.open('GET', 'https://api.adviceslip.com/advice');
+    request.onload = function () {
+        var data = JSON.parse(this.response);
+    };
+    request.send();
+```
+
 ### Continued development
+
+- Improve JS and do comprehensive code
+- Focus on Semantic
 
 ### Useful resources
 
-## Author
+- [box shadow generator](https://html-css-js.com/css/generator/box-shadow/)
+- [How to connect to an API with JavaScript](https://www.taniarascia.com/how-to-connect-to-an-api-with-javascript/)
+
+### Author
 
 - Frontend Mentor - [@martinw0](https://www.frontendmentor.io/profile/martinw0)
 - Twitter - [@LeWalletM](https://www.twitter.com/LeWalletM)

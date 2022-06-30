@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+$light-cyan: hsl(193, 38%, 86%);
+$neon-green: hsl(150, 100%, 66%);
+$grayish-blue: hsl(217, 19%, 38%);
+$dark-grayish-blue: hsl(217, 19%, 24%);
+$dark-blue: hsl(218, 23%, 16%);
 $breakpoints: (
     "phone-down": 500px,
     "tablet-up": 768px,
@@ -18,6 +24,86 @@ $breakpoints: (
 }
 html {
     font-size: 62.5%;
+    font-family: 'Manrope', sans-serif;
+    height: 100%;
+}
+body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: $dark-blue;
+}
+main {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card {
+    background-color: $dark-grayish-blue;
+    border-radius: 15px;
+    text-align: center;
+    width: 310px;
+    position: relative;
+    padding: 35px 15px;
+    @include media-min('tablet-down') {
+        width: 444px;
+        padding: 35px 48px;
+    }
+}
+h1 {
+    color: $neon-green;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.4rem;
+    @include media-min('tablet-down') {
+        font-size: 1.2rem;
+    }
+}
+h2 {
+    color: $light-cyan;
+    font-size: 2.2rem;
+    margin: 30px 0;
+    @include media-min('tablet-down') {
+        margin: 40px 0;
+        font-size: 2.5rem;
+    }
+}
+img {
+    margin: 15px auto;
+    @include media-min('tablet-down') {
+        margin: 25px 0;
+    }
+}
+button {
+    background: center / auto no-repeat url('./images/icon-dice.svg'),
+                $neon-green;
+    width: 54px;
+    height: 54px;
+    border: none;
+    border-radius: 50%;
+    position: absolute;
+    bottom: -27px;
+    left: 143px;
+    @include media-min('tablet-down') {
+        left: 243px;
+    }
+    &:hover {
+        cursor: pointer;
+        box-shadow: 0px 0px 19px 6px rgba(82,255,168,0.39);
+    }
+}
+.mobile {
+    display: block;
+    @include media-min('tablet-down') {
+        display: none;
+    }
+}
+.desktop {
+    display: none;
+    @include media-min('tablet-down') {
+        display: block;
+    }
 }
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
